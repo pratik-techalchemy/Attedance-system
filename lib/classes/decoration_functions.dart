@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:final_task/config/palette.dart';
+import 'package:final_task/classes/palette.dart';
 
-InputDecoration registerInputDecoration({required String hintText}) {
+InputDecoration registerInputDecoration({@required String hintText}) {
   return InputDecoration(
     contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
     hintStyle: const TextStyle(color: Colors.white, fontSize: 18),
@@ -23,7 +23,7 @@ InputDecoration registerInputDecoration({required String hintText}) {
   );
 }
 
-InputDecoration signInInputDecoration({required String hintText}) {
+InputDecoration signInInputDecoration({@required String hintText}) {
   return InputDecoration(
     contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
     hintStyle: const TextStyle(fontSize: 18),

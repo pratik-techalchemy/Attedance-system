@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 
-import './auth.dart';
+import '../logged_out/auth_screen.dart';
 
 class HomeScreen extends StatelessWidget {
 

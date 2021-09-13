@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../config/palette.dart';
+import '../../classes/palette.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 

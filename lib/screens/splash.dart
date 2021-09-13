@@ -1,34 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:lit_firebase_auth/lit_firebase_auth.dart';
-import './home.dart';
-import './auth.dart';
+import 'home.dart';
+import '../logged_out/auth_screen.dart';
+
 
 class SplashScreen extends StatelessWidget {
+
   static MaterialPageRoute get route => MaterialPageRoute(
         builder: (context) => SplashScreen(),
       );
-
-  @override
-  Widget build(BuildContext context) {
-    
-    final user = context.watchSignedInUser();
-    user.map(
-      (value) {
-        _navigateToHomeScreen(context);
-      },
-      empty: (_) {
-        _navigateToAuthScreen(context);
-      },
-      initializing: (_) {},
-    );
-
-    return const Scaffold(
-      body: Center(
-        child: CircularProgressIndicator(),
-      ),
-    );
-  }
 
   void _navigateToAuthScreen(BuildContext context) {
     WidgetsBinding.instance?.addPostFrameCallback(
@@ -41,4 +21,17 @@ class SplashScreen extends StatelessWidget {
       (_) => Navigator.of(context).pushReplacement(HomeScreen.route),
     );
   }
+  
+  @override
+  Widget build(BuildContext context) {
+    
+    _navigateToAuthScreen(context);
+
+    return const Scaffold(
+      body: Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+  }
+
 }

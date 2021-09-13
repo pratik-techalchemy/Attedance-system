@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:math';
 
-import '../config/palette.dart';
+import 'palette.dart';
 
 class BackgroundPainter extends CustomPainter {
-  BackgroundPainter({required Animation<double> animation})
+  BackgroundPainter({@required Animation<double> animation})
       : bluePaint = Paint()
           ..color = Palette.lightBlue
           ..style = PaintingStyle.fill,
@@ -83,14 +83,14 @@ class BackgroundPainter extends CustomPainter {
 
     path.lineTo(
       0,
-      ld0h!,
+      ld0h,
     );
     _addPointsToPath(path, [
       Point(
-        ld0w3!,
+        ld0w3,
         ld0h,
       ),
-      Point(ldw2w43!, ldh2h43!),
+      Point(ldw2w43, ldh2h43),
       Point(size.width, ldh2h43),
     ]);
 
@@ -119,26 +119,26 @@ class BackgroundPainter extends CustomPainter {
     final ldh5h4 = lerpDouble(size.height / 5, size.height / 4, greyAnim.value);
     path.lineTo(
       0,
-      ldh4h2!,
+      ldh4h2 ,
     );
     _addPointsToPath(
       path,
       [
         Point(
           size.width / 4,
-          ldh2h34!,
+          ldh2h34 ,
         ),
         Point(
           size.width * 3 / 5,
-          ldh4h22!,
+          ldh4h22 ,
         ),
         Point(
           size.width * 4 / 5,
-          ldh6h3!,
+          ldh6h3 ,
         ),
         Point(
           size.width,
-          ldh5h4!,
+          ldh5h4 ,
         ),
       ],
     );
@@ -167,21 +167,21 @@ class BackgroundPainter extends CustomPainter {
 
       path.lineTo(
         0,
-        ld0h12!,
+        ld0h12 ,
       );
 
       _addPointsToPath(path, [
         Point(
           size.width / 7,
-          ld0h6!,
+          ld0h6 ,
         ),
         Point(
           size.width / 3,
-          ld0h10!,
+          ld0h10 ,
         ),
         Point(
           size.width / 3 * 2,
-          ld0h8!,
+          ld0h8 ,
         ),
         Point(
           size.width * 3 / 4,
